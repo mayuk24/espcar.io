@@ -11,11 +11,11 @@ EspCar.io is an application that will allow you to control a car made with esp82
 - Each web client can control an esp car.
 - Each web client can see the status of each esp car.
 
-##Installation
+## Installation
 ```bash
 $ npm install espcar.io
 ```
-####Edit  index.js
+#### Edit  index.js
 Edit the host variable in line 7 for your host.
 ```javascript
 const
@@ -32,12 +32,12 @@ const
 		console.log(`Server running at http://${host}:${port}/`);
 	};
 ```
-####Edit  public/js/app.js
+#### Edit  public/js/app.js
 Use your code editor to find 'YOUR-HOST' in app.js and change it to your host.
 ```javascript
 (new E.a({debug:!0,connection:M()("http://YOUR-HOST:3000/")}))
 ```
-####Edit  EspCar-ino/espcar.ino
+#### Edit  EspCar-ino/espcar.ino
 Add your wifi credentials and your server host to the ino file.
 ```c++
 const char* ssid = "YOUR-SSID";
@@ -48,7 +48,7 @@ int SERVERPORT = 3000;
 ```
 Now you should be ready to go.
 
-##Optional
+## Optional
 #### Edit vue project
 If you want to edit the vue project simply start the project inside the espcar.io-vue-view folder.
 
@@ -65,10 +65,10 @@ Vue.use(new VueSocketIO({
 	connection: io('http://YOUR-HOST:3000/')
 }));
 ```
-#Hardware requirements
+# Hardware requirements
 The main components you need for the esp car are an esp8266 and an h-bridge with 4 inputs and 4 outputs.
 
 In another moment I will add a more detailed guide for the assembly of the esp car and share the stl files.
 
-#License
+# License
 copyright &copy; 2020 Marco Concepcion. Licensed under the MIT license.
