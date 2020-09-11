@@ -16,11 +16,6 @@ EspCar.io is an application that will allow you to control a car made with esp82
 ```bash
 $ git clone https://github.com/mayuk24/espcar.io
 ```
-Or 
-```bash
-$ npm install espcar.io
-```
-And then extract the folder espcar.io from node_modules folder to the project main directory
 
 #### Edit  index.js
 Edit the host variable in line 7 for your host.
