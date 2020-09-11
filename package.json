@@ -22,6 +22,10 @@
     "email": "m4yuk24@gmail.com"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mayuk24/espcar.io"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
