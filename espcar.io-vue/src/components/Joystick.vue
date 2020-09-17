@@ -94,8 +94,8 @@ export default {
 		},
 		move() {
 			let 
-				x       = Math.round(100 * (this.movedX-this.center) /this.rango),
-				y       = Math.round(-(100 * (this.movedY-this.center) /this.rango));
+				x  = Math.round(100 * (this.movedX-this.center) /this.rango),
+				y  = Math.round(-(100 * (this.movedY-this.center) /this.rango));
 			if(this.axes)this.$emit("move",x,y);
 			else{
 				let

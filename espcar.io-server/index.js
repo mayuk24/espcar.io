@@ -1,14 +1,12 @@
 const
-	express = require('express'),
-	app     = express(),
-	server  = require('http').createServer(app),
-	io      = require('socket.io')(server),
-	Move    = require('./move');
-	host    = (process.env.HOST || 'YOUR-HOST'),
-	port    = (process.env.PORT || '3000'),
-	pbl    = './public',
-	msg    = () =>
-	{
+	{host,port} = require('../config'),
+	express			= require('express'),
+	app					= express(),
+	server			= require('http').createServer(app),
+	io					= require('socket.io')(server),
+	Move				= require('./src/move'),
+	public			= './public',
+	msg					= () =>{
 		console.log(`Server running at http://${host}:${port}/`);
 	};
 
@@ -16,13 +14,13 @@ server.listen(port,host,msg);
 
 app.use(express.static(pbl));
 
-let 
-	conexions  = 0,
-	clients = { 
+let
+	log 			= true,
+	conexions	= 0,
+	clients		= { 
 		joysticks:[],
 		esps: []
-	},
-	log = true;
+	};
 
 const uEsps = (io,socketId = false) =>{
 	if(socketId)io.to(socketId).emit('uEsps',{clientId:socketId,esps:clients.esps});

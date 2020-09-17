@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 
 Vue.use(new VueSocketIO({
 	debug: true,
-	connection: io('http://YOUR-HOST:3000/')
+	connection: io(`http://YOUR-HOST:YOUR-PORT/`)
 }));
 
 new Vue({
