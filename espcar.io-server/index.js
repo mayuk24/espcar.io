@@ -5,7 +5,7 @@ const
 	server			= require('http').createServer(app),
 	io					= require('socket.io')(server),
 	Move				= require('./src/move'),
-	public			= './public',
+	pbl			= './public',
 	msg					= () =>{
 		console.log(`Server running at http://${host}:${port}/`);
 	};
